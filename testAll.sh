@@ -6,8 +6,8 @@ CKPTS=checkpoints
 #fairseq-interactive data-bin/esp/ --source-lang=esp.input --target-lang=esp.output --path=checkpoints/esp-models/checkpoint_best.pt --input=tst.esp.input
 
 
-fairseq-interactive "${DATABIN}/${LANGUAGE}/" \
---source-lang="${LANGUAGE}.input" \
---target-lang="${LANGUAGE}.output" \
+fairseq-interactive "${DATABIN}/all/" \
+--source-lang="all.input" \
+--target-lang="all.output" \
 --path="checkpoints/all-models/checkpoint_best.pt" \
 --input="lang/test.${LANGUAGE}.input" | grep -P "D-[0-9]+" | cut -f3 > lang/test.${LANGUAGE}.output

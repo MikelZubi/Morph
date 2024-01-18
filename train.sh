@@ -40,6 +40,7 @@ CNM=1.0
 
 
 fairseq-train "${DATABIN}/${LANGUAGE}" \
+		  --no-progress-bar \
 	      --task=translation \
 	      --source-lang="${LANGUAGE}.input" \
 	      --target-lang="${LANGUAGE}.output" \

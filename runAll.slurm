@@ -16,11 +16,16 @@ FACTS=(1 30 50 70)
 
 
 for FACT in ${FACTS[@]}; do
+    echo $FACT
     for LANG in ${LANGS[@]}; do
 
         python createFiles.py $LANG $FACT
         
     done
+    
+    rm -rf data-bin/all
+    rm -rf checkpoints/all-models
+
 
     python agrupateFiles.py 
     bash ./preprocess.sh all
