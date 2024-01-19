@@ -22,9 +22,9 @@ DHS=1024
 DNL=4
 # Decoder number of attention heads.
 DAH=4
+
 # Dropout
 DRP=0.3
-
 # Batch size
 BTS=400
 # Max-update
