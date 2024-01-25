@@ -2,7 +2,7 @@ import os
 import sys
 from augment import augment
 
-
+#Function that preprocesses one line of the test set getting the input
 def preprocessTest(parts):
     input = "< "
     for part in parts[0]:
@@ -10,6 +10,7 @@ def preprocessTest(parts):
     input += "> " + parts[1].replace(";", " ")
     return input
 
+#Function that preprocesses one line of the dev/train set getting the input and output
 def preprocess(parts):
     input = "< "
     for part in parts[0]:
@@ -22,6 +23,7 @@ def preprocess(parts):
     return input, output
 
     
+#Function that creates the files
 def createFile(file, tag, factor = 2):
 
     setTI = file.split('.')[-1]
